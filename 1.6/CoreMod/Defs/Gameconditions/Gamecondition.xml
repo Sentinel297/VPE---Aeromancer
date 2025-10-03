@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+    <GameConditionDef>
+    <defName>DeltaStreamSTNL</defName>
+    <conditionClass>VPE_Cyclone.DeltaStreamSTNL</conditionClass>
+    <label>Delta Stream</label>
+	<description>An Aeromancer is manifesting strong winds that will override weather based conditions. (Temperature/Psychic phenomonena remain unaffected.)</description>
+    <letterDef>PositiveEvent</letterDef>
+    <weatherDef>DeltaStreamSTNL</weatherDef>
+    <canBePermanent>true</canBePermanent>
+    <natural>false</natural>
+    <allowUnderground>false</allowUnderground>
+  </GameConditionDef> 
+</Defs>

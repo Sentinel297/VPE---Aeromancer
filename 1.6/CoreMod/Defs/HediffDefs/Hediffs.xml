@@ -1,0 +1,256 @@
+<Defs>
+
+
+<HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defName>PsychicBurnoutASTNL</defName>
+	<label>Psychic Burnout</label>
+	<description>This person has lost the ability to use psychic abilities for a while due to overworking themselves.</description>
+	<descriptionShort>This person has lost the ability to use psychic abilities for a while due to overworking themselves.</descriptionShort>
+	<defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<initialSeverity>1</initialSeverity>
+	<isBad>false</isBad>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<statFactors>
+				<PsychicSensitivity>0</PsychicSensitivity>
+			</statFactors>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>60000</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+	</comps>
+</HediffDef> 
+
+<HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defName>PersonalAtmoSTNL</defName>
+	<label>Aero shield</label>
+	<description>A psychic phenomenon is protecting this creature from the vacuum of space as well as airborne toxins. A miniature skip gate within them that is connected to the nearest habitable planet allows them to breathe.\n\nControlled airflow allows this creature to withstand harsher climates.</description>
+	<descriptionShort>A psychic phenomenon is protecting this creature from the vacuum of space as well as airborne toxins. A miniature skip gate within them that is connected to the nearest habitable planet allows them to breathe.\n\nControlled airflow allows this creature to withstand harsher climates.</descriptionShort>
+	<defaultLabelColor>(0, 1, 1)</defaultLabelColor>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<initialSeverity>1</initialSeverity>
+	<isBad>false</isBad>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<statOffsets>
+				<VacuumResistance MayRequire="Ludeon.Rimworld.Odyssey">1</VacuumResistance>
+				<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+				<ComfyTemperatureMax>30</ComfyTemperatureMax>
+				<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			</statOffsets>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>60000</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_Effecter">
+			<stateEffecter>VPE_AeroshieldSTNL</stateEffecter>
+		</li>
+	</comps>
+</HediffDef>
+
+<EffecterDef>
+    <defName>VPE_AeroshieldSTNL</defName>
+    <children>
+
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <fleckDef>AirPuff</fleckDef>
+		<ticksBetweenMotes>10</ticksBetweenMotes>
+        <burstCount>2</burstCount>
+        <speed>0</speed>
+        <scale>2</scale>
+      </li>
+    </children>
+  </EffecterDef> 	
+
+<!-- Headwind/Tailwind -->
+
+<HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defName>HeadwindSTNL</defName>
+	<label>Headwind</label>
+	<description>This creature is being slowed by the Delta Stream.</description>
+	<descriptionShort>This creature is being slowed by the Delta Stream.</descriptionShort>
+	<defaultLabelColor>(0, 0.5, 0.5)</defaultLabelColor>
+	<initialSeverity>1</initialSeverity>
+	<makesSickThought>False</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>true</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>-0.20</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>2500</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+	</comps>
+</HediffDef> 	
+
+<HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defName>TailwindSTNL</defName>
+	<label>Tailwind</label>
+	<description>This creature's movement speed is being enhanced by the Delta Stream.</description>
+	<descriptionShort>This creature's movement speed is being enhanced by the Delta Stream.</descriptionShort>
+	<defaultLabelColor>(0, 1, 1)</defaultLabelColor>
+	<initialSeverity>1</initialSeverity>
+	<makesSickThought>False</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.20</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>2500</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+	</comps>
+</HediffDef> 	
+
+<!-- Hypoxia -->
+
+  <HediffDef>
+    <defName>VPE_Cyclone_HypoxiaSTNL</defName>
+    <label>Hypoxia</label>
+    <description>This creature has had oxygen forcefully taken from their lungs, repeated deprivation of oxygen will be fatal.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <comps>
+      <li Class="HediffCompProperties_VacuumExposure">
+        <severityPerSecondUnexposed>-0.005</severityPerSecondUnexposed>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>initial</label>
+        <minSeverity>0.15</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+        <painOffset>0.10</painOffset>
+      </li>
+      <li>
+        <label>mild</label>
+        <minSeverity>0.3</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+        <painOffset>0.20</painOffset>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.5</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+        <painOffset>0.50</painOffset>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.70</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.10</setMax>
+          </li>
+        </capMods>
+        <painOffset>0.70</painOffset>
+      </li>
+    </stages>
+  </HediffDef>
+  
+    <HediffDef>
+    <defName>VPE_Cyclone_UpdraftSTNL</defName>
+    <label>Updraft</label>
+    <description>This person possess the ability to temporarily create a controlled burst of wind below their feet, allowing them to jump to target locations.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0, 0.9, 0.9)</defaultLabelColor>
+    <comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>2500</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+    </stages>
+	<abilities>
+	<li>UpdraftJumpSTNL</li>
+	</abilities>
+  </HediffDef>
+  
+  
+  <AbilityDef>
+    <defName>UpdraftJumpSTNL</defName>
+    <label>Updraft</label>
+    <description>Jump to a distant location using small scale wind manipulation.</description>
+    <iconPath>UI_CycloneSTNL/Abilities/Jump</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>jump</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>0.5</warmupTime>
+      <range>19.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>Longjump_Jump</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastJump</jobDef>
+  </AbilityDef>
+
+</Defs>

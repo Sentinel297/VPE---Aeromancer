@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_CycloneSTNL</defName>
+    <label>Aeromancer</label>
+    <description>Manipulate the power of the wind to affect friend and foe alike.</description>
+    <background>UI_CycloneSTNL/Tree/Cyclonetreebase</background>
+    <altBackground>UI_CycloneSTNL/Tree/Cyclonetreebase</altBackground>
+    <tab>Misc</tab>
+    <tooltip>Manipulate the power of the wind to affect friend and foe alike.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+
+</Defs>

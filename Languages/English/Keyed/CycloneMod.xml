@@ -1,0 +1,13 @@
+<LanguageData>
+	<!-- =======Mod Settings======= -->
+
+    <!-- Push -->
+	<PushStreamSTNL>Push</PushStreamSTNL>
+	<PushPawnStreamSTNL>Push Distance: {0} Cells</PushPawnStreamSTNL>
+	
+	<!-- Pull -->
+	
+	<PullStreamSTNL>Pull</PullStreamSTNL>
+	<PullPawnStreamSTNL>Pull Distance: {0} Cells (Will Stop In Front Of Caster)</PullPawnStreamSTNL>
+
+</LanguageData>

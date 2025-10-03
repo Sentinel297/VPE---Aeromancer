@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>	
+
+<!-- Level 1 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_AirPushSTNL</defName>
+	<label>Push</label>
+	<description>Create a strong gust of wind, pushing the target creature.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/Push</iconPath>
+	<abilityClass>VPE_Cyclone.Ability_WindPush</abilityClass>
+	<castTime>120</castTime>
+	<range>15.5</range>
+	<durationTime>675000</durationTime>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>true</canTargetSelf>
+		<canTargetAnimals>true</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetItems>true</canTargetItems>
+		<canTargetMechs>true</canTargetMechs>
+	</targetingParameters>
+	<needsTicking>true</needsTicking>
+	<castSound>VPE_EnergyDump_Cast</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_CycloneSTNL</path>
+			<level>1</level>
+			<order>1</order>
+			<psyfocusCost>0.03</psyfocusCost>
+			<entropyGain>5</entropyGain>
+			
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+
+ <!-- Level 2 -->
+	 
+	 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_AirPullSTNL</defName>
+	<label>Pull</label>
+	<description>Create a strong gust of wind, pulling the target creature toward your general direction.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/Pull</iconPath>
+	<abilityClass>VPE_Cyclone.Ability_WindPull</abilityClass>
+	<castTime>120</castTime>
+	<range>15.5</range>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>true</canTargetSelf>
+		<canTargetAnimals>true</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetItems>true</canTargetItems>
+		<canTargetMechs>true</canTargetMechs>
+	</targetingParameters>
+	<needsTicking>true</needsTicking>
+	<castSound>VPE_EnergyDump_Cast</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_CycloneSTNL</path>
+			<level>2</level>
+			<order>2</order>
+			<psyfocusCost>0.03</psyfocusCost>
+			<entropyGain>5</entropyGain>
+			<prerequisites>
+          <li>VPE_AirPushSTNL</li>
+        </prerequisites>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+	 
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_HypoxiaSTNL</defName>
+	<label>Hypoxia</label>
+	<description>Rip out the air from the target's lungs, causing them to show signs of hypoxia, repeated uses will worsen the effect until death once hypoxia reaches 100%.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/Hypoxia</iconPath>
+	<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+	<castTime>45</castTime>
+	<range>14.9</range>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>true</canTargetSelf>
+		<canTargetAnimals>true</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetItems>true</canTargetItems>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+	<needsTicking>true</needsTicking>
+	<castSound>VPE_FireBeam_Cast</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_CycloneSTNL</path>
+			<level>2</level>
+			<order>1</order>
+			<psyfocusCost>0.05</psyfocusCost>
+			<entropyGain>10</entropyGain>
+			<prerequisites>
+				<li>VPE_AirPushSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_Hediff">
+			<hediff>VPE_Cyclone_HypoxiaSTNL</hediff>
+			<severity>0.49</severity>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+	 
+ <!-- Level 3 -->
+ 
+ <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_UpdraftSTNL</defName>
+	<label>Updraft</label>
+	<description>Temporarily allow the target to jump by creating small wind explosions beneath their feet.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/Updraft</iconPath>
+	<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+	<castTime>30</castTime>
+	<range>14.9</range>
+	<durationTime>20000</durationTime>
+	<chance>0</chance>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>true</canTargetSelf>
+		<canTargetAnimals>true</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetItems>true</canTargetItems>
+		<canTargetMechs>true</canTargetMechs>
+	</targetingParameters>
+	<needsTicking>true</needsTicking>
+	<castSound>Psycast_Skip_Entry</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_CycloneSTNL</path>
+			<level>3</level>
+			<order>1</order>
+			<psyfocusCost>0.20</psyfocusCost>
+			<entropyGain>15</entropyGain>
+<prerequisites>
+	<li>VPE_HypoxiaSTNL</li>
+</prerequisites>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+			<onTarget>
+				<li>VPE_Cyclone_UpdraftSTNL</li>
+			</onTarget>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+ 
+
+
+ <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_DisarmingGaleSTNL</defName>
+	<label>Disarming Gale</label>
+	<description>Cause a brief miniature tornado to swirl around the target's hands, using it to strip them of their weapon, sending it hurling to your feet.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/Disarming</iconPath>
+	<abilityClass>VPE_Cyclone.Ability_StripWeapon</abilityClass>
+	<castTime>60</castTime>
+	<range>14.9</range>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>true</canTargetSelf>
+		<canTargetAnimals>true</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetItems>true</canTargetItems>
+		<canTargetMechs>true</canTargetMechs>
+	</targetingParameters>
+	<needsTicking>true</needsTicking>
+	<castSound>VPE_FireTornado_Cast</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_CycloneSTNL</path>
+			<level>3</level>
+			<order>3</order>
+			<psyfocusCost>0.20</psyfocusCost>
+			<entropyGain>25</entropyGain>
+			<prerequisites>
+	<li>VPE_AirPullSTNL</li>
+</prerequisites>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+ 
+
+ 
+ <!-- Level 4 -->
+ 
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_PersonalAtmoSTNL</defName>
+	<label>Aero Shield</label>
+	<description>Temporarily surround the targets with a miniature self-sustaining atmosphere that will allow them to breathe in the vacuum of space and render them immune to airborne toxins. Will provide 30°c of insulation.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/Atmo</iconPath>
+	<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+	<castTime>120</castTime>
+	<range>14.9</range>
+	<radius>2.5</radius>
+	<hasAoE>True</hasAoE>
+	<durationTime>30000</durationTime>
+	<durationTimeStatFactors>
+		<PsychicSensitivity>1</PsychicSensitivity>
+	</durationTimeStatFactors>
+	<chance>0</chance>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetItems>false</canTargetItems>
+		<canTargetMechs>false</canTargetMechs>
+		<!-- Why -->
+	</targetingParameters>
+	<targetingParametersForAoE>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>true</canTargetSelf>
+		<canTargetAnimals>true</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetItems>false</canTargetItems>
+		<canTargetMechs>true</canTargetMechs>
+	</targetingParametersForAoE>
+	<needsTicking>true</needsTicking>
+	<castSound>VPE_Psyring_Cast</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_CycloneSTNL</path>
+			<level>4</level>
+			<order>1</order>
+			<psyfocusCost>0.50</psyfocusCost>
+			<entropyGain>30</entropyGain>
+			<prerequisites>
+				<li>VPE_UpdraftSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+			<onTarget>
+				<li>PersonalAtmoSTNL</li>
+			</onTarget>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+ 
+
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_TornadoSTNL</defName>
+	<label>Tornado</label>
+	<description>Psychically form an unstable pillar of wind that will wreck havoc on the battlefield.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/Tornado</iconPath>
+	<abilityClass>VEF.Abilities.Ability_Spawn</abilityClass>
+	<castTime>120</castTime>
+	<range>45.5</range>
+	<chance>0</chance>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetItems>false</canTargetItems>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+	<needsTicking>true</needsTicking>
+	<castSound>VPE_FireTornado_Cast</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_CycloneSTNL</path>
+			<level>4</level>
+			<order>2</order>
+			<psyfocusCost>0.70</psyfocusCost>
+			<entropyGain>75</entropyGain>
+			<prerequisites>
+	<li>VPE_UpdraftSTNL</li>
+	<li>VPE_DisarmingGaleSTNL</li>
+</prerequisites>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_Spawn">
+			<thing>Tornado</thing>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_DeltaStreamSTNL</defName>
+    <label>Delta Stream</label>
+    <description>Alter the local weather to conjure strong winds that will override other active weather based conditions, additionally, allies will obtain the tailwind hediff, boosting their movement speed while enemies will obtain the headwind hediff, slowing them down.</description>
+    <iconPath>UI_CycloneSTNL/Abilities/Delta</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <castTime>600</castTime>
+	<chance>0</chance>
+    <targetMode>Self</targetMode>
+    <castSound>Psycast_Neuroquake_Effect</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_CycloneSTNL</path>
+        <level>4</level>
+        <order>3</order>
+        <psyfocusCost>0.5</psyfocusCost>
+        <entropyGain>50</entropyGain>
+<prerequisites>
+	<li>VPE_DisarmingGaleSTNL</li>
+</prerequisites>
+      </li>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_GameCondition">
+        <gameCondition>DeltaStreamSTNL</gameCondition>
+        <durationDays>1</durationDays>
+      </li>
+    </modExtensions>
+	 </VEF.Abilities.AbilityDef>
+
+
+
+<!-- Level 5 -->
+
+  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_MassAirPushSTNL</defName>
+	<label>Mass Push</label>
+	<description>Call forth a great gust of wind, pushing away all targets.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/MassPush</iconPath>
+	<abilityClass>VPE_Cyclone.Ability_AOEWindPush</abilityClass>
+	<castTime>120</castTime>
+	<range>15.5</range>
+	<targetMode>Location</targetMode>
+	<radius>5</radius>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetItems>false</canTargetItems>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+	<needsTicking>true</needsTicking>
+	<castSound>VPE_IceShield_Cast</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_CycloneSTNL</path>
+			<level>5</level>
+			<order>1</order>
+			<psyfocusCost>0.24</psyfocusCost>
+			<entropyGain>20</entropyGain>
+<prerequisites>
+	<li>VPE_PersonalAtmoSTNL</li>
+	<li>VPE_TornadoAOESTNL</li>
+</prerequisites>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_TornadoAOESTNL</defName>
+	<label>Devastating Winds</label>
+	<description>Psychically form an unstable cataclysm upon the target area, the absurd strength of those tornados will annihilate the local area. (Seriously, don't use this on your home tile.)\n\nThe sheer effort it takes to cast this ability will prevent you from using psycasts for a day.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/Ninefold</iconPath>
+	<abilityClass>VEF.Abilities.Ability_Spawn</abilityClass>
+	<castTime>750</castTime>
+	<durationTime>60000</durationTime>
+	<range>45.5</range>
+	<hasAoE>true</hasAoE>
+	<radius>2.5</radius>
+	<chance>0</chance>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetItems>false</canTargetItems>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+	<targetingParametersForAoE>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetItems>false</canTargetItems>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParametersForAoE>
+	<needsTicking>true</needsTicking>
+	<castSound>VPE_FireTornado_Cast</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_CycloneSTNL</path>
+			<level>5</level>
+			<order>1</order>
+			<psyfocusCost>0.90</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+	<li>VPE_TornadoSTNL</li>
+</prerequisites>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_Spawn">
+			<thing>Tornado</thing>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+			<onCaster>
+				<li>PsychicBurnoutASTNL</li>
+			</onCaster>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_MassAirPullSTNL</defName>
+	<label>Mass Pull</label>
+	<description>Call forth a great gust of wind, pulling all targets closer.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/MassPull</iconPath>
+	<abilityClass>VPE_Cyclone.Ability_AOEWindPull</abilityClass>
+	<castTime>120</castTime>
+	<range>15.5</range>
+	<targetMode>Location</targetMode>
+	<radius>5</radius>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetItems>false</canTargetItems>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+	<needsTicking>true</needsTicking>
+	<castSound>VPE_IceShield_Cast</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_CycloneSTNL</path>
+			<level>5</level>
+			<order>3</order>
+			<psyfocusCost>0.24</psyfocusCost>
+			<entropyGain>20</entropyGain>
+		<prerequisites>
+	<li>VPE_DeltaStreamSTNL</li>
+	<li>VPE_TornadoAOESTNL</li>
+</prerequisites>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+</Defs>
+
