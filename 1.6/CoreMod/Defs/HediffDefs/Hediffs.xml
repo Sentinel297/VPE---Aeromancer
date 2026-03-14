@@ -31,8 +31,7 @@
 	<hediffClass>HediffWithComps</hediffClass>
 	<defName>PersonalAtmoSTNL</defName>
 	<label>Aero shield</label>
-	<description>A psychic phenomenon is protecting this creature from the vacuum of space as well as airborne toxins. A miniature skip gate within them that is connected to the nearest habitable planet allows them to breathe.\n\nControlled airflow allows this creature to withstand harsher climates.</description>
-	<descriptionShort>A psychic phenomenon is protecting this creature from the vacuum of space as well as airborne toxins. A miniature skip gate within them that is connected to the nearest habitable planet allows them to breathe.\n\nControlled airflow allows this creature to withstand harsher climates.</descriptionShort>
+	<description>A psychic phenomenon is protecting this creature from the vacuum of space and airborne toxins.\n\nControlled airflow allows this creature to withstand harsher climates.</description>
 	<defaultLabelColor>(0, 1, 1)</defaultLabelColor>
 	<scenarioCanAdd>false</scenarioCanAdd>
 	<initialSeverity>1</initialSeverity>
@@ -60,19 +59,18 @@
 </HediffDef>
 
 <EffecterDef>
-    <defName>VPE_AeroshieldSTNL</defName>
-    <children>
-
-      <li>
-        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
-        <fleckDef>AirPuff</fleckDef>
-		<ticksBetweenMotes>10</ticksBetweenMotes>
-        <burstCount>2</burstCount>
-        <speed>0</speed>
-        <scale>2</scale>
-      </li>
-    </children>
-  </EffecterDef> 	
+	<defName>VPE_AeroshieldSTNL</defName>
+	<children>
+		<li>
+			<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+			<fleckDef>AirPuff</fleckDef>
+			<ticksBetweenMotes>10</ticksBetweenMotes>
+			<burstCount>2</burstCount>
+			<speed>0</speed>
+			<scale>2</scale>
+		</li>
+	</children>
+</EffecterDef> 	
 
 <!-- Headwind/Tailwind -->
 

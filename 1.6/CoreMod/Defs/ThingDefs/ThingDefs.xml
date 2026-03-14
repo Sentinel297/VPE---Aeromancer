@@ -1,0 +1,24 @@
+<Defs>
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>VPE_Aeromancer_Cyclone_STNL</defName>
+		<label>Cyclone</label>
+		<thingClass>VPE_Cyclone.Typhoon</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<drawOffscreen>true</drawOffscreen>
+		<seeThroughFog>true</seeThroughFog>
+		<alwaysFlee>false</alwaysFlee>
+		<comps>
+			<li Class="CompProperties_WindSource"/>
+		</comps>
+		<modExtensions>
+			<li Class="VPE_Cyclone.TyphoonModExt">
+				<SuckRadius>20.9</SuckRadius>
+				<DamageRadius>20.9</DamageRadius>
+				<tornadoXSize>15</tornadoXSize>
+				<tornadoYSize>8</tornadoYSize>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>
+

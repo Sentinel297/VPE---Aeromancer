@@ -6,7 +6,7 @@
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_AirPushSTNL</defName>
 	<label>Push</label>
-	<description>Create a strong gust of wind, pushing the target creature.</description>
+	<description>Conjure a strong gust of wind, pushing the target creature away from the caster.</description>
 	<iconPath>UI_CycloneSTNL/Abilities/Push</iconPath>
 	<abilityClass>VPE_Cyclone.Ability_WindPush</abilityClass>
 	<castTime>120</castTime>
@@ -29,20 +29,18 @@
 			<path>VPE_CycloneSTNL</path>
 			<level>1</level>
 			<order>1</order>
-			<psyfocusCost>0.03</psyfocusCost>
+			<psyfocusCost>0.01</psyfocusCost>
 			<entropyGain>5</entropyGain>
-			
 		</li>
 	</modExtensions>
 </VEF.Abilities.AbilityDef>
 
-
  <!-- Level 2 -->
 	 
-	 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_AirPullSTNL</defName>
 	<label>Pull</label>
-	<description>Create a strong gust of wind, pulling the target creature toward your general direction.</description>
+	<description>Conjure a strong gust of wind, pulling the target creature towards the caster's general direction.</description>
 	<iconPath>UI_CycloneSTNL/Abilities/Pull</iconPath>
 	<abilityClass>VPE_Cyclone.Ability_WindPull</abilityClass>
 	<castTime>120</castTime>
@@ -64,11 +62,11 @@
 			<path>VPE_CycloneSTNL</path>
 			<level>2</level>
 			<order>2</order>
-			<psyfocusCost>0.03</psyfocusCost>
+			<psyfocusCost>0.01</psyfocusCost>
 			<entropyGain>5</entropyGain>
 			<prerequisites>
-          <li>VPE_AirPushSTNL</li>
-        </prerequisites>
+				<li>VPE_AirPushSTNL</li>
+			</prerequisites>
 		</li>
 	</modExtensions>
 </VEF.Abilities.AbilityDef>
@@ -116,7 +114,7 @@
  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_UpdraftSTNL</defName>
 	<label>Updraft</label>
-	<description>Temporarily allow the target to jump by creating small wind explosions beneath their feet.</description>
+	<description>Temporarily allow the target to jump by creating controlled wind explosions beneath their feet.</description>
 	<iconPath>UI_CycloneSTNL/Abilities/Updraft</iconPath>
 	<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 	<castTime>30</castTime>
@@ -140,8 +138,8 @@
 			<path>VPE_CycloneSTNL</path>
 			<level>3</level>
 			<order>1</order>
-			<psyfocusCost>0.20</psyfocusCost>
-			<entropyGain>15</entropyGain>
+			<psyfocusCost>0.05</psyfocusCost>
+			<entropyGain>25</entropyGain>
 <prerequisites>
 	<li>VPE_HypoxiaSTNL</li>
 </prerequisites>
@@ -153,13 +151,11 @@
 		</li>
 	</modExtensions>
 </VEF.Abilities.AbilityDef>
- 
-
 
  <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_DisarmingGaleSTNL</defName>
 	<label>Disarming Gale</label>
-	<description>Cause a brief miniature tornado to swirl around the target's hands, using it to strip them of their weapon, sending it hurling to your feet.</description>
+	<description>Cause a brief miniature tornado to swirl around the target's hands to disarm them, resulting in their weapon landing at the caster's feet.</description>
 	<iconPath>UI_CycloneSTNL/Abilities/Disarming</iconPath>
 	<abilityClass>VPE_Cyclone.Ability_StripWeapon</abilityClass>
 	<castTime>60</castTime>
@@ -181,16 +177,14 @@
 			<path>VPE_CycloneSTNL</path>
 			<level>3</level>
 			<order>3</order>
-			<psyfocusCost>0.20</psyfocusCost>
-			<entropyGain>25</entropyGain>
+			<psyfocusCost>0.07</psyfocusCost>
+			<entropyGain>35</entropyGain>
 			<prerequisites>
 	<li>VPE_AirPullSTNL</li>
 </prerequisites>
 		</li>
 	</modExtensions>
 </VEF.Abilities.AbilityDef>
- 
-
  
  <!-- Level 4 -->
  
@@ -236,8 +230,8 @@
 			<path>VPE_CycloneSTNL</path>
 			<level>4</level>
 			<order>1</order>
-			<psyfocusCost>0.50</psyfocusCost>
-			<entropyGain>30</entropyGain>
+			<psyfocusCost>0.15</psyfocusCost>
+			<entropyGain>55</entropyGain>
 			<prerequisites>
 				<li>VPE_UpdraftSTNL</li>
 			</prerequisites>
@@ -249,8 +243,6 @@
 		</li>
 	</modExtensions>
 </VEF.Abilities.AbilityDef>
- 
-
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_TornadoSTNL</defName>
@@ -258,7 +250,7 @@
 	<description>Psychically form an unstable pillar of wind that will wreck havoc on the battlefield.</description>
 	<iconPath>UI_CycloneSTNL/Abilities/Tornado</iconPath>
 	<abilityClass>VEF.Abilities.Ability_Spawn</abilityClass>
-	<castTime>120</castTime>
+	<castTime>90</castTime>
 	<range>45.5</range>
 	<chance>0</chance>
 	<targetMode>Location</targetMode>
@@ -278,12 +270,12 @@
 			<path>VPE_CycloneSTNL</path>
 			<level>4</level>
 			<order>2</order>
-			<psyfocusCost>0.70</psyfocusCost>
-			<entropyGain>75</entropyGain>
+			<psyfocusCost>0.45</psyfocusCost>
+			<entropyGain>90</entropyGain>
 			<prerequisites>
-	<li>VPE_UpdraftSTNL</li>
-	<li>VPE_DisarmingGaleSTNL</li>
-</prerequisites>
+				<li>VPE_UpdraftSTNL</li>
+				<li>VPE_DisarmingGaleSTNL</li>
+			</prerequisites>
 		</li>
 		<li Class="VEF.Abilities.AbilityExtension_Spawn">
 			<thing>Tornado</thing>
@@ -292,42 +284,40 @@
 </VEF.Abilities.AbilityDef>
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-    <defName>VPE_DeltaStreamSTNL</defName>
-    <label>Delta Stream</label>
-    <description>Alter the local weather to conjure strong winds that will override other active weather based conditions, additionally, allies will obtain the tailwind hediff, boosting their movement speed while enemies will obtain the headwind hediff, slowing them down.</description>
-    <iconPath>UI_CycloneSTNL/Abilities/Delta</iconPath>
-    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
-    <castTime>600</castTime>
+	<defName>VPE_DeltaStreamSTNL</defName>
+	<label>Delta Stream</label>
+	<description>Alter the local weather to conjure strong winds that will override other active weather based conditions, additionally, allies will obtain the tailwind hediff, boosting their movement speed while enemies will obtain the headwind hediff, slowing them down.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/Delta</iconPath>
+	<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+	<castTime>180</castTime>
 	<chance>0</chance>
-    <targetMode>Self</targetMode>
-    <castSound>Psycast_Neuroquake_Effect</castSound>
-    <showUndrafted>true</showUndrafted>
-    <modExtensions>
-      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
-        <path>VPE_CycloneSTNL</path>
-        <level>4</level>
-        <order>3</order>
-        <psyfocusCost>0.5</psyfocusCost>
-        <entropyGain>50</entropyGain>
-<prerequisites>
-	<li>VPE_DisarmingGaleSTNL</li>
-</prerequisites>
-      </li>
-      <li Class="VanillaPsycastsExpanded.AbilityExtension_GameCondition">
-        <gameCondition>DeltaStreamSTNL</gameCondition>
-        <durationDays>1</durationDays>
-      </li>
-    </modExtensions>
-	 </VEF.Abilities.AbilityDef>
-
-
+	<targetMode>Self</targetMode>
+	<castSound>Psycast_Neuroquake_Effect</castSound>
+	<showUndrafted>true</showUndrafted>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_CycloneSTNL</path>
+			<level>4</level>
+			<order>3</order>
+			<psyfocusCost>0.5</psyfocusCost>
+			<entropyGain>50</entropyGain>
+			<prerequisites>
+				<li>VPE_DisarmingGaleSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_GameCondition">
+			<gameCondition>DeltaStreamSTNL</gameCondition>
+			<durationDays>1</durationDays>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
 
 <!-- Level 5 -->
 
   <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_MassAirPushSTNL</defName>
 	<label>Mass Push</label>
-	<description>Call forth a great gust of wind, pushing away all targets.</description>
+	<description>Call forth a great gust of wind, pushing away all targets away from the caster.</description>
 	<iconPath>UI_CycloneSTNL/Abilities/MassPush</iconPath>
 	<abilityClass>VPE_Cyclone.Ability_AOEWindPush</abilityClass>
 	<castTime>120</castTime>
@@ -350,8 +340,8 @@
 			<path>VPE_CycloneSTNL</path>
 			<level>5</level>
 			<order>1</order>
-			<psyfocusCost>0.24</psyfocusCost>
-			<entropyGain>20</entropyGain>
+			<psyfocusCost>0.07</psyfocusCost>
+			<entropyGain>35</entropyGain>
 <prerequisites>
 	<li>VPE_PersonalAtmoSTNL</li>
 	<li>VPE_TornadoAOESTNL</li>
@@ -362,15 +352,15 @@
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_TornadoAOESTNL</defName>
-	<label>Devastating Winds</label>
-	<description>Psychically form an unstable cataclysm upon the target area, the absurd strength of those tornados will annihilate the local area. (Seriously, don't use this on your home tile.)\n\nThe sheer effort it takes to cast this ability will prevent you from using psycasts for a day.</description>
-	<iconPath>UI_CycloneSTNL/Abilities/Ninefold</iconPath>
+	<label>Cyclone</label>
+	<description>Provoke a large scale atmospheric instability to form a major cyclone that will pull in nearby creatures and raze nearby buildings.\n\nThe sheer concentration required to manifest this cyclone will shut down the caster's Psylink for a day after using this ability.</description>
+	<iconPath>UI_CycloneSTNL/Abilities/Whirlwind</iconPath>
 	<abilityClass>VEF.Abilities.Ability_Spawn</abilityClass>
-	<castTime>750</castTime>
+	<castTime>360</castTime>
 	<durationTime>60000</durationTime>
 	<range>45.5</range>
-	<hasAoE>true</hasAoE>
-	<radius>2.5</radius>
+	<hasAoE>false</hasAoE>
+	<radius>20.9</radius>
 	<chance>0</chance>
 	<targetMode>Location</targetMode>
 	<targetingParameters>
@@ -401,11 +391,11 @@
 			<psyfocusCost>0.90</psyfocusCost>
 			<entropyGain>0</entropyGain>
 			<prerequisites>
-	<li>VPE_TornadoSTNL</li>
-</prerequisites>
+				<li>VPE_TornadoSTNL</li>
+			</prerequisites>
 		</li>
 		<li Class="VEF.Abilities.AbilityExtension_Spawn">
-			<thing>Tornado</thing>
+			<thing>VPE_Aeromancer_Cyclone_STNL</thing>
 		</li>
 		<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
 			<onCaster>
@@ -418,7 +408,7 @@
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_MassAirPullSTNL</defName>
 	<label>Mass Pull</label>
-	<description>Call forth a great gust of wind, pulling all targets closer.</description>
+	<description>Call forth a great gust of wind, pulling all targets closer to the caster.</description>
 	<iconPath>UI_CycloneSTNL/Abilities/MassPull</iconPath>
 	<abilityClass>VPE_Cyclone.Ability_AOEWindPull</abilityClass>
 	<castTime>120</castTime>
@@ -441,8 +431,8 @@
 			<path>VPE_CycloneSTNL</path>
 			<level>5</level>
 			<order>3</order>
-			<psyfocusCost>0.24</psyfocusCost>
-			<entropyGain>20</entropyGain>
+			<psyfocusCost>0.07</psyfocusCost>
+			<entropyGain>35</entropyGain>
 		<prerequisites>
 	<li>VPE_DeltaStreamSTNL</li>
 	<li>VPE_TornadoAOESTNL</li>
