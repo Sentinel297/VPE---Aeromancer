@@ -293,6 +293,7 @@
 	<durationTimeStatFactors>
 	<PsychicSensitivity>1</PsychicSensitivity>
 	</durationTimeStatFactors>
+	<needsTicking>true</needsTicking>
 	<castTime>180</castTime>
 	<chance>0</chance>
 	<targetMode>Self</targetMode>
