@@ -1,13 +1,12 @@
 <LanguageData>
 	<!-- =======Mod Settings======= -->
-
-    <!-- Push -->
+	<!-- Push -->
 	<PushStreamSTNL>Push</PushStreamSTNL>
 	<PushPawnStreamSTNL>Push Distance: {0} Cells</PushPawnStreamSTNL>
-	
 	<!-- Pull -->
-	
 	<PullStreamSTNL>Pull</PullStreamSTNL>
 	<PullPawnStreamSTNL>Pull Distance: {0} Cells (Will Stop In Front Of Caster)</PullPawnStreamSTNL>
-
+	<!-- Delta Stream -->
+	<VPE_Cyclone_DeltaStream_Setting_STNL>Delta Stream</VPE_Cyclone_DeltaStream_Setting_STNL>
+	<VPE_Cyclone_DeltaStream_Setting_Visual_STNL>Do VFX:</VPE_Cyclone_DeltaStream_Setting_Visual_STNL>
 </LanguageData>

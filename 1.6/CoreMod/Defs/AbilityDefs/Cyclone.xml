@@ -288,7 +288,11 @@
 	<label>Delta Stream</label>
 	<description>Alter the local weather to conjure strong winds that will override other active weather based conditions, additionally, allies will obtain the tailwind hediff, boosting their movement speed while enemies will obtain the headwind hediff, slowing them down.</description>
 	<iconPath>UI_CycloneSTNL/Abilities/Delta</iconPath>
-	<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+	<abilityClass>VPE_Cyclone.Ability_ForceCondition</abilityClass>
+	<durationTime>60000</durationTime>
+	<durationTimeStatFactors>
+	<PsychicSensitivity>1</PsychicSensitivity>
+	</durationTimeStatFactors>
 	<castTime>180</castTime>
 	<chance>0</chance>
 	<targetMode>Self</targetMode>
@@ -305,9 +309,11 @@
 				<li>VPE_DisarmingGaleSTNL</li>
 			</prerequisites>
 		</li>
-		<li Class="VanillaPsycastsExpanded.AbilityExtension_GameCondition">
-			<gameCondition>DeltaStreamSTNL</gameCondition>
-			<durationDays>1</durationDays>
+		<li Class="VPE_Cyclone.AbilityForceCondiExt">
+			<conditionDef>DeltaStreamSTNL</conditionDef>
+			<global>false</global>
+			<scaleDuraWithSensi>true</scaleDuraWithSensi>
+			<aiCanUse>false</aiCanUse>
 		</li>
 	</modExtensions>
 </VEF.Abilities.AbilityDef>
